@@ -1,6 +1,7 @@
 import pandas as pd
 import requests
 
+
 def load_gdp_data():
     """Download annual GDP data for seven countries, 2000–2022."""
 
@@ -28,6 +29,7 @@ def load_gdp_data():
     df = pd.DataFrame(data[1])
 
     return df
+
 
 def clean_gdp_data(raw_df):
     """Clean World Bank GDP data for analysis."""

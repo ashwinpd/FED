@@ -14,3 +14,6 @@ __pycache__/
 
 # Ignore local secrets
 .env
+
+# Ignore CSV data files
+*.csv

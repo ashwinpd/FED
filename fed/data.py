@@ -1,7 +1,8 @@
 import pandas as pd
 import requests
 
-def load_gdp_data():
+
+def load_gdp_data() -> pd.DataFrame:
     """Download annual GDP data for seven countries, 2000–2022."""
 
     countries = "GBR;USA;BRA;JPN;CHN;DEU;CHE"
@@ -14,7 +15,7 @@ def load_gdp_data():
     params = {
         "format": "json",
         "date": "2000:2022",
-        "per_page": 1000
+        "per_page": "1000"
     }
 
     response = requests.get(url, params=params, timeout=30)
@@ -29,7 +30,8 @@ def load_gdp_data():
 
     return df
 
-def clean_gdp_data(raw_df):
+
+def clean_gdp_data(raw_df: pd.DataFrame) -> pd.DataFrame:
     """Clean World Bank GDP data for analysis."""
 
     # 1. Select the columns we need from original raw dataset

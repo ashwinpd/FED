@@ -1,8 +1,11 @@
-
+import pandas as pd
 import matplotlib.pyplot as plt
 
+from matplotlib.figure import Figure
+from matplotlib.axes import Axes
 
-def plot_gdp(df):
+
+def plot_gdp(df: pd.DataFrame) -> tuple[Figure, Axes]:
     """Plot annual GDP for each country from 2000 to 2022."""
 
     # Create the figure and axes
